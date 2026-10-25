@@ -1,6 +1,6 @@
-# Discord Termux Tools
+# KVX-NUKE
 
-Panel de consola en Python con menú numerado (01-07) para automatizar tareas
+Panel de consola en Python con menú numerado (01-09) para automatizar tareas
 de Discord desde Termux. Pantalla limpia, banners ASCII y cero basura acumulada.
 
 ## Herramientas
@@ -12,15 +12,9 @@ de Discord desde Termux. Pantalla limpia, banners ASCII y cero basura acumulada.
 | 03 | Nuke por comando `!nuke` |
 | 04 | Eliminar todos los emojis y stickers |
 | 05 | Banear a todos los miembros |
-| 06 | DM-SPAM masivo a todo el servidor (cantidad configurable, 150 por defecto) |
-| 07 | Renombrar todos los canales + cambiar nombre e imagen del servidor |
+| 06 | DM-SPAM masivo a todo el servidor (150 por defecto) |
+| 07 | Renombrar todos los canales + nombre e imagen del servidor |
+| 08 | Crear roles en masa / borrar TODOS los roles |
+| 09 | Dar un rol a todos los usuarios (con admin o sin admin) |
 
-## Instalación en Termux
-
-```bash
-pkg update && pkg upgrade -y
-pkg install python git -y
-git clone https://github.com/TU_USUARIO/discord-termux-tools.git
-cd discord-termux-tools
-pip install -r requirements.txt
-bash run.sh
+`10` cambia el token, `00` sale.
