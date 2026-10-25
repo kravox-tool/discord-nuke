@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Panel de herramientas Discord para Termux."""
+"""KVX-NUKE · Panel de herramientas Discord para Termux."""
 
 import sys
 
@@ -13,6 +13,8 @@ from tools import (
     dm_spam,
     nuke_command,
     rename_all,
+    role_give_all,
+    roles_manager,
 )
 
 TOOLS = [
@@ -23,6 +25,8 @@ TOOLS = [
     ("05", "Banear a todos los miembros", ban_all),
     ("06", "DM-SPAM masivo a todo el servidor", dm_all),
     ("07", "Renombrar todo + nombre e imagen del servidor", rename_all),
+    ("08", "Crear roles / borrar todos los roles", roles_manager),
+    ("09", "Dar un rol a todos los usuarios (admin / sin admin)", role_give_all),
 ]
 
 
@@ -44,7 +48,7 @@ def mostrar_menu():
     for numero, nombre, _ in TOOLS:
         print(f"   {ui.GREEN}{ui.BOLD}[{numero}]{ui.RESET}  {ui.WHITE}{nombre}{ui.RESET}")
     print()
-    print(f"   {ui.MAGENTA}{ui.BOLD}[08]{ui.RESET}  {ui.WHITE}Cambiar token{ui.RESET}")
+    print(f"   {ui.MAGENTA}{ui.BOLD}[10]{ui.RESET}  {ui.WHITE}Cambiar token{ui.RESET}")
     print(f"   {ui.RED}{ui.BOLD}[00]{ui.RESET}  {ui.WHITE}Salir{ui.RESET}")
     print()
     ui.sep()
@@ -67,7 +71,7 @@ def main():
             print(f"\n{ui.GREEN}{ui.BOLD}  Cerrando panel...{ui.RESET}\n")
             break
 
-        if opcion in ("8", "08"):
+        if opcion in ("10", "010"):
             pedir_token()
             continue
 
